@@ -1,0 +1,15 @@
+# VanillaCommandAdvance. Перечитать: /vca reload
+# enabled и aliases применяются только после рестарта сервера.
+
+commands:
+  gamemode:
+    # false: плагин не регистрирует команду, работает ванильный /gamemode
+    enabled: true
+    aliases: [gm]
+  tp:
+    enabled: true
+    aliases: [teleport]
+
+# true: телепортированному игроку ничего не пишется, сообщение видит только отправитель.
+# Право vanillacommandadvance.tp.silent делает телепорт тихим даже при false.
+silent-target: true

@@ -1,0 +1,63 @@
+name: VanillaCommandAdvance
+version: '${project.version}'
+main: ru.fell.vca.VanillaCommandAdvance
+api-version: '1.21'
+folia-supported: true
+author: fell
+description: Enhanced /gamemode and /tp with flexible permissions, aliases and configurable messages
+
+permissions:
+  vanillacommandadvance.*:
+    description: Все права плагина
+    default: op
+    children:
+      vanillacommandadvance.gamemode.*: true
+      vanillacommandadvance.tp.*: true
+      vanillacommandadvance.reload: true
+  vanillacommandadvance.gamemode.*:
+    description: Все режимы, себе и другим
+    default: op
+    children:
+      vanillacommandadvance.gamemode.survival: true
+      vanillacommandadvance.gamemode.creative: true
+      vanillacommandadvance.gamemode.adventure: true
+      vanillacommandadvance.gamemode.spectator: true
+      vanillacommandadvance.gamemode.others: true
+  vanillacommandadvance.gamemode.survival:
+    default: op
+  vanillacommandadvance.gamemode.creative:
+    default: op
+  vanillacommandadvance.gamemode.adventure:
+    default: op
+  vanillacommandadvance.gamemode.spectator:
+    default: op
+  vanillacommandadvance.gamemode.others:
+    description: Смена режима другим игрокам
+    default: op
+  vanillacommandadvance.tp.*:
+    description: Все формы /tp
+    default: op
+    children:
+      vanillacommandadvance.tp.self: true
+      vanillacommandadvance.tp.others: true
+      vanillacommandadvance.tp.coords: true
+      vanillacommandadvance.tp.worlds: true
+      vanillacommandadvance.tp.silent: true
+  vanillacommandadvance.tp.self:
+    description: Телепорт самого себя
+    default: op
+  vanillacommandadvance.tp.others:
+    description: Телепорт других игроков и сущностей
+    default: op
+  vanillacommandadvance.tp.coords:
+    description: Телепорт по координатам
+    default: op
+  vanillacommandadvance.tp.worlds:
+    description: Телепорт между мирами
+    default: op
+  vanillacommandadvance.tp.silent:
+    description: Телепортируемому никогда не приходит сообщение
+    default: op
+  vanillacommandadvance.reload:
+    description: /vca reload
+    default: op

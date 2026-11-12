@@ -1,0 +1,26 @@
+# Тексты в формате MiniMessage: https://docs.advntr.dev/minimessage/format.html
+# Удалённый ключ берётся из значения по умолчанию.
+# Плейсхолдеры: <player> — кого касается команда, <target> — куда (игрок или координаты), <sender> — кто ввёл,
+# <gamemode>, <x> <y> <z> <world>. <prefix> работает в любом сообщении.
+
+prefix: "<dark_gray>[<gold>VCA</gold>]</dark_gray> "
+
+no-permission: "<prefix><red>Недостаточно прав"
+player-only: "<prefix><red>Эту форму команды может использовать только игрок"
+reloaded: "<prefix><green>config.yml и messages.yml перечитаны"
+many-entities: "<count> сущностей"
+
+gamemode-names:
+  survival: "Выживание"
+  creative: "Творческий"
+  adventure: "Приключение"
+  spectator: "Наблюдатель"
+gamemode-self: "<prefix><gray>Режим игры: <white><gamemode>"
+gamemode-other: "<prefix><gray>Режим игры <white><player></white>: <white><gamemode>"
+gamemode-changed-by: "<prefix><gray><white><sender></white> сменил ваш режим игры на <white><gamemode>"
+gamemode-unknown: "<prefix><red>Неизвестный режим: <input>"
+
+tp-to-entity: "<prefix><gray>Телепорт: <white><player></white> → <white><target>"
+tp-to-location: "<prefix><gray>Телепорт: <white><player></white> → <white><x> <y> <z></white> (<world>)"
+tp-notify: "<prefix><gray><white><sender></white> телепортировал вас к <white><target>"
+tp-no-worlds: "<prefix><red>Нет права телепортировать <player> в другой мир"
